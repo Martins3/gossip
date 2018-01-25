@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane fx:id="borderPane" maxHeight="620.0" maxWidth="1040.0" prefHeight="620.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.MainWindow">
+    <top>
+        <MenuBar fx:id="menuBar">
+            <menus>
+                <Menu text="Config">
+                    <items>
+                        <MenuItem  onAction="#loadConfig" text="Load"> </MenuItem>
+                        <MenuItem  onAction="#saveConfig" text="Save"> </MenuItem>
+                        <MenuItem  onAction="#openConfigPane" text="Config"> </MenuItem>
+                    </items>
+                </Menu>
+
+
+                <Menu text="Cluster">
+                    <items>
+                        <MenuItem  onAction="#initCluster" text="Init"> </MenuItem>
+                        <MenuItem  onAction="#restart" text="Restart"> </MenuItem>
+                        <MenuItem  onAction="#addNewMessage" text="Add Msg"> </MenuItem>
+                        <MenuItem  onAction="#startCluster" text="Run"> </MenuItem>
+                        <MenuItem  onAction="#freezeCluster" text="Freeze"> </MenuItem>
+                    </items>
+                </Menu>
+
+                <Menu text="Host">
+                    <items>
+                        <MenuItem  onAction="#destroyHost" text="Destroy"> </MenuItem>
+                        <MenuItem  onAction="#reviveHost" text="Revive"> </MenuItem>
+                        <MenuItem  onAction="#addNewHost" text="Add"> </MenuItem>
+                    </items>
+                </Menu>
+
+
+
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <LineChart fx:id="bc" layoutX="-40.0" layoutY="-3.0" prefHeight="205.0" prefWidth="409.0">
+            <xAxis>
+                <NumberAxis fx:id="yAxis" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" fx:id="xAxis" />
+            </yAxis>
+        </LineChart>
+    </center>
+</BorderPane>
+
